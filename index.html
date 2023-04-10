@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>FOODS</h1>
+        <div class="card" id="cards">
+
+            <script>
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "foods.php");
+                xmlhttp.send();
+                xmlhttp.onload = function() {
+                    const foods = JSON.parse(this.responseText).foods;
+                    const items = document.getElementById('cards');
+                    var j=0;
+                    if(foods){
+                        for(const i in foods){
+                            j += 1;
+                            const row =`
+                                <div class="card">
+                                    <div class="face front">
+                                        <img src="${foods[i].image}" alt="">
+                                        <h3>${foods[i].name}</h3>
+                                    </div>
+                                    <div class="face back">
+                                        <h3>${foods[i].price}</h3>
+                                        <p>${foods[i].desc}</p>
+                                        <p>calories</p>
+                                        <ul>
+                                            <p>Italy:${foods[i].calories.It}</p>
+                                            <p>Hongkong:${foods[i].calories.hk}</p>
+                                            <p>Canada:${foods[i].calories.ca}</p>
+                                            <p>Philippines:${foods[i].calories.ph}</p>
+                                            <p>Amerika:${foods[i].calories.a}</p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `;
+                            items.innerHTML += row;
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>   
+</body>
+</html>
