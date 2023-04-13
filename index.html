@@ -15,7 +15,7 @@
 
             <script>
                 const xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", "foods.php");
+                xmlhttp.open("GET","http://Localhost/midtermjson/foods.php");
                 xmlhttp.send();
                 xmlhttp.onload = function() {
                     const foods = JSON.parse(this.responseText).foods;
@@ -34,13 +34,6 @@
                                         <h3>${foods[i].price}</h3>
                                         <p>${foods[i].desc}</p>
                                         <p>calories</p>
-                                        <ul>
-                                            <p>Italy:${foods[i].calories.It}</p>
-                                            <p>Hongkong:${foods[i].calories.hk}</p>
-                                            <p>Canada:${foods[i].calories.ca}</p>
-                                            <p>Philippines:${foods[i].calories.ph}</p>
-                                            <p>Amerika:${foods[i].calories.a}</p>
-                                        </ul>
                                     </div>
                                 </div>
                             `;

@@ -19,7 +19,7 @@ $foods = array(
   ),
 
   array(
-    "name" => "Berry-Berry Belgian Waffles",
+    "name" => "Berry Berry Belgian Waffles",
     "price" => "199",
     "desc" => ">Light Belgian waffles covered with an assortment of fresh berries and whipped cream",
     "calories" => "950",

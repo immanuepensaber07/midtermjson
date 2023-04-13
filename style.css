@@ -9,25 +9,27 @@
     font-family: sans-serif;
 }
 body{
+    background-image: url("https://getwallpapers.com/wallpaper/full/a/7/3/367998.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: rgb(134, 132, 228);
+    background-color: rgb(227, 227, 236);
 
 }
 .container h1{
     text-align: center;
+    background-image: url("https://wallpapercave.com/wp/wp2776799.jpg");
     font-size: 100px;
-    height: 200px;
-    color: rgb(205, 219, 0);
+    height: 100px;
+    color: rgb(248, 51, 100);
 }
 
 .card{
     position: relative;
-    width: 1500px;
-    height: 350px;
-    margin: 10px;
+    width: 1200px;
+    height: 300px;
+    margin: 5px;
 }
 
 
@@ -43,7 +45,7 @@ body{
 
 .card .front {
     transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #cc2f98;
+    box-shadow: 0 5px 10px #fd00a9;
 }
 
 .card .front img {
@@ -53,6 +55,7 @@ body{
     object-fit: cover;
 }
 .card .front h3 {
+    background-image: url("https://wallpapercave.com/wp/wp2776799.jpg");
     position: absolute;
     bottom: 0;
     width: 100px;
@@ -63,7 +66,7 @@ body{
 }
 .card .back {
     transform: perspective(600px)rotateY(180deg);
-    background-color: rgb(65, 206, 119);
+    background-color: rgb(231, 158, 215);
     padding: 15px;
     color: rgb(255, 255, 255);
     display: flex;
@@ -73,12 +76,14 @@ body{
 }
 
 .card .back .link{
+    background-image: url("https://wallpapercave.com/wp/wp2776799.jpg");
     border-top: solid 1px #f3f3f3;
     height: 50px;
     line-height: 50px;
 }
 
 .card .back h3{
+    background-image: url("https://wallpapercave.com/wp/wp2776799.jpg");
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
